@@ -2,4 +2,6 @@ FastAPI
 pandas 
 numpy
 pydantic
+scikit-learn
+Joblib
 # CORSMiddleware

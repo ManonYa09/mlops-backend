@@ -13,4 +13,7 @@
 ### Window User
 - Create: python3 -m venv myven(name environment)
 - Activate:
-###
+### Install requrements.txt
+- pip install -r requrements.txt
+
+
