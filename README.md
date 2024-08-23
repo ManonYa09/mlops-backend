@@ -12,8 +12,6 @@
 - Activate: source myven(name environment)/bin/activate
 ### Window User
 - Create: python3 -m venv myven(name environment)
-- Activate:
+- Activate: myven(name environment)\Scripts\activate
 ### Install requrements.txt
 - pip install -r requrements.txt
-
-
