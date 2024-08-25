@@ -14,8 +14,20 @@ class DropColumns(BaseEstimator, TransformerMixin):
     def __init__(self, variables_to_drop=None):
         self.variables_to_drop = variables_to_drop or config.FEATURES_DROP
     
+<<<<<<<<<<<<<<  ✨ Codeium Command 🌟  >>>>>>>>>>>>>>>>
     def fit(self, X, y=None):
+        """
+        Fit simply returns self.
+        
+        Parameters
+        ----------
+        X : pandas.DataFrame
+            The features to be transformed.
+        y : pandas.Series, optional
+            The target variable, by default None.
+        """
         return self
+<<<<<<<  8e29ce0e-1e78-46e7-ad01-239790fb1e65  >>>>>>>
     
     def transform(self, X):
         X = X.drop(columns=self.variables_to_drop)
