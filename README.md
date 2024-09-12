@@ -15,3 +15,10 @@
 - Activate: myven(name environment)\Scripts\activate
 ### Install requrements.txt
 - pip install -r requrements.txt
+
+
+### If you get Port Already in use error while using mlflow
+    - Get List of Services & PID running
+    `sudo lsof -i tcp:5000`
+    - Kill them 
+    `kill -15 <PID>`

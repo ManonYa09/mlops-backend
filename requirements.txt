@@ -4,4 +4,5 @@ numpy
 pydantic
 scikit-learn
 Joblib
+mlflow
 # CORSMiddleware

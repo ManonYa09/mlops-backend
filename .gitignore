@@ -1,4 +1,5 @@
 #Ignore environment
 myven/
+MLFlow_manage_ml_Experiments/
 .idea/
 .DS_Store/
