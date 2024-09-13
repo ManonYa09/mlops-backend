@@ -3,11 +3,11 @@ import sys
 import pathlib as Path
 # Adding the parent directory to the sys.path
 
-PACKAGE_ROOT = Path.Path(os.path.abspath(os.path.dirname(__file__))).parent.parent
+PACKAGE_ROOT = Path.Path(os.path.abspath(os.path.dirname(__file__))).parent
 
 # Append PACKAGE_ROOT to sys.path so Python can find building_prediction_model
 sys.path.append(str(PACKAGE_ROOT))
-
+print(PACKAGE_ROOT)
 DATAPATH = os.path.join(PACKAGE_ROOT, "datasets")
 
 DATASET = 'Churn_Modelling.csv'
@@ -37,5 +37,6 @@ FEATURES_TO_SCALE = ['CreditScore','Age','Tenure','Balance','NumOfProducts','Est
 
 FEATURES_DROP = ['RowNumber','CustomerId','Surname']
 
-print(PACKAGE_ROOT)
-print(DATAPATH)
+# print(PACKAGE_ROOT)
+# print(DATAPATH)
+print(SAVE_MODEL_PATH)

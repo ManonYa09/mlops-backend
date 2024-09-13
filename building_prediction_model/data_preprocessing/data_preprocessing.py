@@ -14,20 +14,12 @@ class DropColumns(BaseEstimator, TransformerMixin):
     def __init__(self, variables_to_drop=None):
         self.variables_to_drop = variables_to_drop or config.FEATURES_DROP
     def fit(self, X, y=None):
-        """
-        Fit simply returns self.
-        
-        Parameters
-        ----------
-        X : pandas.DataFrame
-            The features to be transformed.
-        y : pandas.Series, optional
-            The target variable, by default None.
-        """
+        return self
     def transform(self, X):
         X = X.drop(columns=self.variables_to_drop)
         return X
 
+        return self
 # Transformer to encode and create dummy variables
 class EncodeAndBind(BaseEstimator, TransformerMixin):
     def __init__(self, encode=None, dummy=None):

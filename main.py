@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
-
 from model.PredictionModel import PredictionModel
 from service.PredictionService import *
 
@@ -41,7 +40,7 @@ async def say_hello(request: PredictionModel):
     predict = predict_churn(input_data)
     num = np.float32(predict)
 
-    result = 'Customer will unlikely churn.' if float(num) > 0.5 else 'Customer is likely to churn.'
+    result = 'Approved' if float(num) > 0.5 else 'Rejected'
     return {
         "probability": float(num),
         "prediction": result
