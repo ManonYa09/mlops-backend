@@ -30,15 +30,12 @@ def perform_pipeline():
     test_data[config.TARGET] = y_test
     test_data.to_csv(os.path.join(config.DATAPATH,config.TEST_FILE))
     pipe.classification_pipeline.fit(X_train,y_train)
-
-#Save the pipeline
     try:
-        joblib.dump(pipe.classification_pipeline, save_path)
+        save_pipeline(pipe.classification_pipeline)
         print(f"Model has been saved to {save_path}")
     except FileNotFoundError as e:
         print(f"Error: {e}")
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
-    # save_pipeline(pipe.classification_pipeline)
 if __name__=='__main__':
     perform_pipeline()
