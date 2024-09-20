@@ -42,3 +42,5 @@ def load_pipeline(pipeline_to_load):
     model_loaded = joblib.load(save_path)
     print(f"Model has been loaded")
     return model_loaded
+
+print(config.SAVE_MODEL_PATH)

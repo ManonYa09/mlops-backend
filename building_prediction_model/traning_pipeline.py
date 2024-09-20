@@ -28,7 +28,7 @@ def perform_pipeline():
     X_train, X_test, y_train, y_test = split_data(X,y)
     test_data = X_test.copy()
     test_data[config.TARGET] = y_test
-    test_data.to_csv(os.path.join(config.DATAPATH,config.TEST_FILE))
+    test_data.to_csv(os.path.join(config.DATAPATH,config.TEST_FILE), index = False)
     pipe.classification_pipeline.fit(X_train,y_train)
     try:
         save_pipeline(pipe.classification_pipeline)

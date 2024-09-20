@@ -39,4 +39,4 @@ FEATURES_DROP = ['RowNumber','CustomerId','Surname']
 
 # print(PACKAGE_ROOT)
 # print(DATAPATH)
-print(SAVE_MODEL_PATH)
+print(TARGET)

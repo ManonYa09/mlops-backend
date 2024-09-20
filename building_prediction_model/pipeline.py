@@ -19,6 +19,4 @@ classification_pipeline = Pipeline(
     ('Encode_and_bind', pp.EncodeAndBind(encode='Gender', dummy='Geography')),
     ('Scale', pp.Scale(variables=['CreditScore','Age','Tenure','Balance','NumOfProducts','EstimatedSalary'])),
     ('Model', LogisticRegression(random_state=12))])
-
-
 print(classification_pipeline)
